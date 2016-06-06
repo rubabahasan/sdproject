@@ -68,7 +68,7 @@ class Front extends Controller {
     public function blog_post($id) {
         $post = Post::find($id);
 
-        $tags = $post->tags;
+        //$tags = $post->tags;
         $prev_url = Post::prevBlogPostUrl($post->id);
         $next_url = Post::nextBlogPostUrl($post->id);
         $title = $post->title;
@@ -79,7 +79,7 @@ class Front extends Controller {
         
         $content = $post->content;
 
-        $data = compact('prev_url', 'next_url', 'tags', 'post', 'title', 'description', 'page', 'time', 'content', 'image');
+        $data = compact('prev_url', 'next_url', 'post', 'title', 'description', 'page', 'time', 'content', 'image');
         //return view('blog_post', $data);
 
         return view('blog_post_custom', $data);
