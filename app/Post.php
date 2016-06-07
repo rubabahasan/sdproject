@@ -26,7 +26,20 @@ class Post extends Model
     }
     public static function saveInput($title, $content, $image) {
         $date = date('m/d/Y h:i:s a', time());
-        
-        DB::table('Posts')->insert(['title' => $title, 'content' => $content, 'created_at' => $date, 'created_at_ip' => $date, 'url' => $date, 'image' => $image]);
+        $char = '';
+        $strlen = strlen($content);
+        if($strlen<100)
+        {
+            $j = $strlen;
+        }
+        else
+        {
+            $j = 100;
+        }
+        for( $i = 0; $i <= $j; $i++ ) {
+            $char .= substr( $content, $i, 1 );
+            
+        }
+        DB::table('Posts')->insert(['title' => $title, 'content' => $content, 'created_at' => $date, 'created_at_ip' => $date, 'url' => $date, 'image' => $image, 'description' => $char]);
     }
 }

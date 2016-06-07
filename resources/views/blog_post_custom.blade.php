@@ -64,6 +64,9 @@
                     <li>
                         <a href="contact.php">Contact</a>
                     </li>
+                    <li>
+                        <a href="blog/write">Write</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

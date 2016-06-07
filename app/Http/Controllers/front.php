@@ -99,13 +99,12 @@ class Front extends Controller {
         $image = $request->get('image');
         $input = Post::saveInput($title, $content, $image);
         
-        /*$posts = Post::where('id', '>', 0)->paginate(3);
+        $posts = Post::where('id', '>', 0)->paginate(3);
         $posts->setPath('blog');
 
         $data['posts'] = $posts;
 
-        return view('blog', array('data' => $data, 'title' => 'Latest Blog Posts', 'description' => '', 'page' => 'blog', 'brands' => $this->brands, 'categories' => $this->categories, 'products' => $this->products));*/
-        //return view('hello');
+        return view('blog_input_success');
     }
     
     public function blog_write() {

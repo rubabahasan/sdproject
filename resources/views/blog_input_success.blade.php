@@ -12,14 +12,16 @@
     <title>Blog | Ghuri</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/business-casual.css" rel="stylesheet">
+    <link href="{{ asset('css/business-casual.css') }}" rel="stylesheet">
+
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,40 +77,14 @@
     </nav>
 
     <div class="container">
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Travel
-                        <strong>blog</strong>
-                    </h2>
-                    <hr>
-                </div>
+        <div class="box">
+            <div class="col-lg-12">
                 
-                @foreach ($data['posts'] as $thing)
-                <div class="col-lg-12 text-center">
-                    <?php if($thing->image != NULL) $img= $thing->image; else $img = 'img\recent_blogs\no_image.png'?>
-                    
-                    <img class="img-responsive img-border img-full" src= "{{url($img)}}" alt="">
-                    
-                    <h2>{{ $thing->title }}
-                        <br>
-                        <small>{{ $thing->created_at_ip }}</small>
-                    </h2>
-                    <p>{{ $thing->description }}</p>
-                    <?php $url = 'blog/post/'.$thing->id ?>
-                    <a href="{{url($url)}}" class="btn btn-default btn-lg">Read More</a>
-                    <hr>
-                </div>
-                @endforeach
-                {!! $data['posts']->render() !!}
-
-                
-                
+                <h2 class="intro-text text-center"> Beautifully Written!</h2>
             </div>
         </div>
-
+        <?php $url = '/blog' ?>
+        <a href="{{url($url)}}" class="btn btn-default center btn-lg">Back to Blogs</a>
     </div>
     <!-- /.container -->
 
