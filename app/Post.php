@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use DB;
 class Post extends Model
 {
     //
@@ -24,7 +24,9 @@ class Post extends Model
     public function tags() {
         return $this->belongsToMany('App\BlogTag','blog_post_tags','post_id','tag_id');
     }
-    public function saveInput($title, $content) {
-        DB::table('Posts')->insert(['title' => $title, 'content' => $content]);
+    public static function saveInput($title, $content, $image) {
+        $date = date('m/d/Y h:i:s a', time());
+        
+        DB::table('Posts')->insert(['title' => $title, 'content' => $content, 'created_at' => $date, 'created_at_ip' => $date, 'url' => $date, 'image' => $image]);
     }
 }

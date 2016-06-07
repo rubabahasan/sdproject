@@ -8,7 +8,10 @@ use App\Category;
 use App\Product;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
+use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
 
 class Front extends Controller {
 
@@ -18,6 +21,7 @@ class Front extends Controller {
     var $products;
     var $title;
     var $description;
+    var $image;
     
     /*public function __construct() {
         $this->brands = Brand::all(array('name'));
@@ -86,9 +90,14 @@ class Front extends Controller {
     }
     
     public function blog_input(Request $request) {
+        
         $title = $request->get('title');
+        //echo $title;
+        
         $content = $request->get('blog');
-        $input = Post::saveInput($title, $content);
+        //echo $content;
+        $image = $request->get('image');
+        $input = Post::saveInput($title, $content, $image);
         
         /*$posts = Post::where('id', '>', 0)->paginate(3);
         $posts->setPath('blog');
@@ -96,7 +105,7 @@ class Front extends Controller {
         $data['posts'] = $posts;
 
         return view('blog', array('data' => $data, 'title' => 'Latest Blog Posts', 'description' => '', 'page' => 'blog', 'brands' => $this->brands, 'categories' => $this->categories, 'products' => $this->products));*/
-        return view('hello');
+        //return view('hello');
     }
     
     public function blog_write() {

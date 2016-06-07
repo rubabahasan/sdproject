@@ -49,9 +49,10 @@ Route::get('/checkout','front@checkout');
 Route::get('/search/{query}','front@search');*/
 Route::get('/blog','front@blog');
 Route::get('/blog/post/{id}','front@blog_post');
-//Route::get('/blog/write', 'front@blog_write');
-Route::get('/blog/write', 'front@dummy');
-Route::post('input','front@blog_input');
+Route::get('/blog/write', 'front@blog_write');
+//Route::get('input', 'front@dummy');
+//Route::get('/blog/write', 'front@dummy');
+Route::post('/input',['uses'=>'front@blog_input']);
 /*Route::get('/insert', function() {
     App\Category::create(array('name' => 'Music'));
     return 'category added';

@@ -85,11 +85,13 @@
                 
                 @foreach ($data['posts'] as $thing)
                 <div class="col-lg-12 text-center">
-                    <?php $img= $thing->image ?>
-                    <img class="img-responsive img-border img-full" src= "{{ $img }}" alt="">
+                    <?php if($thing->image != NULL) $img= $thing->image; else $img = 'img\recent_blogs\no_image.png'?>
+                    
+                    <img class="img-responsive img-border img-full" src= "{{url($img)}}" alt="">
+                    
                     <h2>{{ $thing->title }}
                         <br>
-                        <small>{{ $thing->created_at }}</small>
+                        <small>{{ $thing->created_at_ip }}</small>
                     </h2>
                     <p>{{ $thing->description }}</p>
                     <?php $url = 'blog/post/'.$thing->id ?>
@@ -100,14 +102,7 @@
                 {!! $data['posts']->render() !!}
 
                 
-                <div class="col-lg-12 text-center">
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Older</a>
-                        </li>
-                        <li class="next"><a href="#">Newer &rarr;</a>
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
 
