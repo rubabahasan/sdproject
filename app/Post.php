@@ -24,7 +24,7 @@ class Post extends Model
     public function tags() {
         return $this->belongsToMany('App\BlogTag','blog_post_tags','post_id','tag_id');
     }
-    public static function saveInput($title, $content, $image) {
+    public static function saveInput($title, $content) {
         $date = date('m/d/Y h:i:s a', time());
         $char = '';
         $strlen = strlen($content);
@@ -40,6 +40,6 @@ class Post extends Model
             $char .= substr( $content, $i, 1 );
             
         }
-        DB::table('Posts')->insert(['title' => $title, 'content' => $content, 'created_at' => $date, 'created_at_ip' => $date, 'url' => $date, 'image' => $image, 'description' => $char]);
+        DB::table('Posts')->insert(['title' => $title, 'content' => $content, 'created_at' => $date, 'created_at_ip' => $date, 'url' => $date,  'description' => $char]);
     }
 }

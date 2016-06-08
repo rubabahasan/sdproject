@@ -88,9 +88,7 @@
                 
                 @foreach ($data['posts'] as $thing)
                 <div class="col-lg-12 text-center">
-                    <?php if($thing->image != NULL) $img= $thing->image; else $img = 'img\recent_blogs\no_image.png'?>
                     
-                    <img class="img-responsive img-border img-full" src= "{{url($img)}}" alt="">
                     
                     <h2>{{ $thing->title }}
                         <br>

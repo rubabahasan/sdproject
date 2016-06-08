@@ -98,62 +98,7 @@
                     <hr>
                 </div>
                 
-                <h4> Likes</h4>
-                <a class="btn btn-primary" href=""><span class='glyphicon glyphicon-thumbs-up'></span></a>
-                
-                <!--comments-->
-                <div class="response-area">
-                    <h3>COMMENTS</h3>
-                    <ul class="media-list">
-                        <li class="media">
-
-                            <div class="media-body">
-                                <ul class="sinlge-post-meta">
-                                    <li><i class="fa fa-user"></i>Janis Gallagher</li>
-                                    <li><i class="fa fa-clock-o"></i> 1:33 pm</li>
-                                    <li><i class="fa fa-calendar"></i> DEC 5, 2013</li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                
-                            </div>
-                        </li>
-                        <li class="media second-media">
-                            
-                            <div class="media-body">
-                                <ul class="sinlge-post-meta">
-                                    <li><i class="fa fa-user"></i>Janis Gallagher</li>
-                                    <li><i class="fa fa-clock-o"></i> 1:33 pm</li>
-                                    <li><i class="fa fa-calendar"></i> DEC 5, 2013</li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                
-                            </div>
-                        </li>
-                        <li class="media">
-                            
-                            <div class="media-body">
-                                <ul class="sinlge-post-meta">
-                                    <li><i class="fa fa-user"></i>Janis Gallagher</li>
-                                    <li><i class="fa fa-clock-o"></i> 1:33 pm</li>
-                                    <li><i class="fa fa-calendar"></i> DEC 5, 2013</li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                
-                            </div>
-                        </li>
-                    </ul>					
-                </div><!--/Response-area-->
-                <hr>
-                <div class="text-area">
-                    <div class="blank-arrow">
-                        <label>Write a Comment</label>
-                    </div>
-                    
-                    <textarea name="message" rows="5" cols="153"></textarea>
-                    <br></br>
-                    <a class="btn btn-primary" href="">Comment</a>
-                </div>
-            </div>
+                        </div>
         </div>
 
     </div>

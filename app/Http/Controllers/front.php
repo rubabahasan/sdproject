@@ -96,8 +96,8 @@ class Front extends Controller {
         
         $content = $request->get('blog');
         //echo $content;
-        $image = $request->get('image');
-        $input = Post::saveInput($title, $content, $image);
+        //$image = $request->get('image');
+        $input = Post::saveInput($title, $content);
         
         $posts = Post::where('id', '>', 0)->paginate(3);
         $posts->setPath('blog');

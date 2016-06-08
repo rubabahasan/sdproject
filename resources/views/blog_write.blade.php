@@ -108,9 +108,7 @@
                       <textarea class="form group form-control" rows="50" id="blog" name="blog"></textarea>
                     </div>
                 </div>
-                <div class="jumbotron center col-lg-6">
-                    <input type="name" class="form-group form-control text-center input-lg" name="image" size="50" placeholder="Path to the image">
-                </div>
+                
                 <div class="jumbotron center form-group col-lg-2">
                    <button type="submit" class="btn btn-default btn-lg">Submit</button>
                 </div>
